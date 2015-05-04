@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        input {
+            vertical-align: middle;
+        }
+
+        .row {
+            padding: 5px;
+        }
+
+        .row .label {
+            display: inline-block;
+            margin-right: 10px;
+            width: 20%;
+            text-align: right;
+        }
+
+        .row input[type='text'] {
+            width: 65%;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <div class="row">
+        <label class="label">State</label>
+        <span id="state">已停止</span>
+    </div>
+    <div class="row">
+        <label class="label">Export To</label>
+        <label><input type="checkbox" id="toFile" />File</label>
+        <label><input type="checkbox" id="toRemote" checked />Remote</label>
+    </div>
+    <div class="row">
+        <label class="label">Remote Server</label>
+        <input type="text" id="serverUrl" value="http://cq01-rdqa-pool192.cq01.baidu.com:8084/har" />
+    </div>
+    <div class="row">
+        <label class="label" for="refreshInterval">Refresh Interval</label>
+        <input type="number" id="refreshInterval" value="30" /> minutes
+    </div>
+    <div class="row">
+        <label class="label"></label>
+        <button type="button" id="startButton">启动</button>
+    </div>
+</form>
+
+<script src="scripts/panel.js"></script>
+</body>
+</html>
